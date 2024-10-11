@@ -1,8 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
+@use "./functions" as f;
 
 $base-size: 16; // in 'px' unit
 
 :root {
+  --padding: #{f.rem(16)};
+  --g-padding: #{f.rem(20)};
+  --b-radius: #{f.rem(6)};
+  --big-b-radius: #{f.rem(8)};
+  --section-padding: #{f.rem(30)};
+  // Colors
+  --text-white: rgb(255, 245, 223);
+  --orange: rgb(255, 133, 0);
+  --black: rgb(6, 6, 6);
+  --green: rgb(132, 194, 198);
+  --gray: rgb(112, 108, 108);
+  --background-color: rgb(23, 23, 23);
+  --yellow: rgb(236, 233, 0);
+  // font families
+  --header-ff: "Lexend Giga";
+  --text-ff: "Manrope";
 }

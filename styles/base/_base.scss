@@ -1,3 +1,11 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Manrope:wght@200..800&display=swap");
+
+body {
+  color: var(--text-white);
+  background-color: var(--background-color);
+  font-family: var(--text-ff);
+}

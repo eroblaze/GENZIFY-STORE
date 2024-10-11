@@ -1,3 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+@use "../abstracts/functions" as f;
+
+.btn {
+  --outline-color: currentColor;
+
+  color: var(--black);
+  border: none;
+  border-radius: 100vmax;
+  background-color: transparent;
+
+  &:focus {
+    outline: f.rem(2) solid var(--outline-color);
+    outline-offset: f.rem(3);
+  }
+
+  &--default {
+    background-color: var(--text-white);
+  }
+  &--orange {
+    background-color: var(--orange);
+  }
+  &--gray {
+    background-color: var(--gray);
+  }
+}

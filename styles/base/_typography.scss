@@ -23,5 +23,6 @@ body {
 
   .#{$el} {
     font-size: f.rem($base-size);
+    font-family: var(--header-ff);
   }
 }

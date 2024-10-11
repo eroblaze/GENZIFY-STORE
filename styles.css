@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Manrope:wght@200..800&display=swap");
+:root {
+  --padding: 1rem;
+  --g-padding: 1.25rem;
+  --b-radius: 0.375rem;
+  --big-b-radius: 0.5rem;
+  --section-padding: 1.875rem;
+  --text-white: rgb(255, 245, 223);
+  --orange: rgb(255, 133, 0);
+  --black: rgb(6, 6, 6);
+  --green: rgb(132, 194, 198);
+  --gray: rgb(112, 108, 108);
+  --background-color: rgb(23, 23, 23);
+  --yellow: rgb(236, 233, 0);
+  --header-ff: "Lexend Giga";
+  --text-ff: "Manrope";
+}
+
 /**
 All external libraries should go in this folder
 **/
@@ -82,6 +101,12 @@ button {
     scroll-behavior: auto !important;
   }
 }
+body {
+  color: var(--text-white);
+  background-color: var(--background-color);
+  font-family: var(--text-ff);
+}
+
 /**
  * Basic typography style for  text
  */
@@ -92,29 +117,41 @@ body {
 
 .h4 {
   font-size: 1.333rem;
+  font-family: var(--header-ff);
 }
 
 .h3 {
   font-size: 1.776889rem;
+  font-family: var(--header-ff);
 }
 
 .h2 {
   font-size: 2.368593037rem;
+  font-family: var(--header-ff);
 }
 
 .h1 {
   font-size: 3.1573345183rem;
+  font-family: var(--header-ff);
 }
 
 .container {
   width: 100%;
-  max-width: 62.5625rem;
+  max-width: 64rem;
   margin-inline: auto;
 }
-@media (max-width: 62.5625rem) {
+@media (max-width: 64rem) {
   .container {
-    padding-inline: var(--general-padding);
+    padding-inline: var(--padding);
   }
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.medium {
+  font-size: 1rem;
 }
 
 .clickable {
@@ -130,6 +167,27 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.btn {
+  --outline-color: currentColor;
+  color: var(--black);
+  border: none;
+  border-radius: 100vmax;
+  background-color: transparent;
+}
+.btn:focus {
+  outline: 0.125rem solid var(--outline-color);
+  outline-offset: 0.1875rem;
+}
+.btn--default {
+  background-color: var(--text-white);
+}
+.btn--orange {
+  background-color: var(--orange);
+}
+.btn--gray {
+  background-color: var(--gray);
 }
 
 /*# sourceMappingURL=styles.css.map */
