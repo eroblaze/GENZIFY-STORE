@@ -1,0 +1,27 @@
+@use "../abstracts/_functions.scss" as f;
+@use "../abstracts/_breakpoints.scss" as b;
+
+.mobile_menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  background-color: var(--black);
+  z-index: 10;
+  padding-block: var(--padding);
+  padding-inline: var(--g-padding);
+  gap: f.rem(40);
+  transition: 150ms ease-in-out transform;
+  transform: translateX(-100vw);
+
+  section,
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--g-padding);
+  }
+
+  @include b.breakpoint(md) {
+    display: none;
+  }
+}

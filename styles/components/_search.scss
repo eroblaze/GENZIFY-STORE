@@ -1,0 +1,49 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/breakpoints" as b;
+
+.search_parent_parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include b.breakpoint(f.rem(767), max-width) {
+    display: none;
+  }
+}
+.search_parent {
+  display: flex;
+  gap: f.rem(10);
+  border: 1px solid var(--gray);
+  padding: f.rem(5) f.rem(5) f.rem(5) var(--g-padding);
+  border-radius: 100vmax;
+  width: 100%;
+  @include b.breakpoint(lg, min-width) {
+    width: 20rem;
+  }
+  @include b.breakpoint(xl, min-width) {
+    width: 100%;
+  }
+}
+.search_parent:focus-within {
+  outline: f.rem(2) solid var(--orange);
+  outline-offset: f.rem(2);
+}
+
+.search_icon {
+  --size: #{f.rem(26)};
+
+  display: grid;
+  place-content: center;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100vmax;
+  background-color: var(--text-white);
+  color: var(--black);
+}
+
+#search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}

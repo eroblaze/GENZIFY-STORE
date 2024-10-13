@@ -18,11 +18,23 @@
 
   &--default {
     background-color: var(--text-white);
+    &-outline {
+      background-color: transparent;
+      border: f.rem(1) solid var(--text-white);
+    }
   }
   &--orange {
     background-color: var(--orange);
+    &-outline {
+      background-color: transparent;
+      border: f.rem(1) solid var(--orange);
+    }
   }
   &--gray {
     background-color: var(--gray);
+    &-outline {
+      background-color: transparent;
+      border: f.rem(1) solid var(--gray);
+    }
   }
 }

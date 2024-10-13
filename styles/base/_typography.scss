@@ -6,8 +6,8 @@
 @use "../abstracts/variables" as v;
 
 $base-size: v.$base-size;
-$type-scale: 1.333; // initial scale
-$elements: h4, h3, h2, h1;
+$type-scale: 1.125; // initial scale
+$elements: h5, h4, h3, h2, h1;
 
 body {
   --user-font-scale: 1rem - 16px;

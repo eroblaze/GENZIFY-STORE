@@ -1,3 +1,66 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+@use "../abstracts/functions" as f;
+@use "../abstracts/breakpoints" as b;
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: f.rem(14);
+  border: f.rem(1) solid red;
+  padding-block: var(--padding);
+  padding-inline: var(--g-padding);
+
+  > * {
+    @include b.breakpoint(md) {
+      width: 33.333333%;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: var(--section-padding);
+    border: f.rem(1) solid yellow;
+
+    @include b.breakpoint(f.rem(767), max-width) {
+      flex-grow: 2;
+      justify-content: center;
+    }
+
+    ul {
+      display: flex;
+      gap: var(--padding);
+      @include b.breakpoint(f.rem(767), max-width) {
+        display: none;
+      }
+    }
+  }
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: f.rem(5);
+
+  &__title {
+    @include b.breakpoint(md, min-width) {
+      display: none;
+    }
+    @include b.breakpoint(lg, min-width) {
+      display: block;
+    }
+  }
+}
+
+.cart_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hamburger_container {
+  @include b.breakpoint(md, min-width) {
+    display: none;
+  }
+}

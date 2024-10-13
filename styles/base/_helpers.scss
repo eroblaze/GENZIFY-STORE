@@ -26,6 +26,30 @@
   cursor: pointer;
 }
 
+svg,
+.icon {
+  width: f.rem(16);
+  height: f.rem(16);
+}
+
+.flex {
+  display: flex !important;
+}
+
+.slide {
+  transform: translateX(0px) !important;
+}
+
+.outline-btn {
+  background-color: transparent;
+  border: f.rem(1) solid var(--gray);
+  border-radius: var(--b-radius);
+  min-width: 0px;
+  min-height: 0px;
+  width: f.rem(44);
+  height: f.rem(44);
+}
+
 // Hides content and makes it only available to screen readers.
 .sr-only {
   position: absolute;

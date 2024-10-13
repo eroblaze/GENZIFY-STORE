@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide breakpoints.
 // -----------------------------------------------------------------------------
+@use "../abstracts/functions" as f;
 
 @use "sass:map";
 
@@ -8,11 +9,11 @@ $breakpoints: (
   "xs": 0px,
   "sm": 30.0625em,
   // 481px
-  "md": 45.0625em,
+  "md": f.rem(768),
   // 721px
-  "lg": 60.0625em,
+  "lg": f.rem(1024),
   // 961px
-  "xl": 75.0625em // 1201px,,,
+  "xl": f.rem(1280)
 );
 
 @mixin breakpoint($bp, $w: min-width) {
